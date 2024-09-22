@@ -2,7 +2,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import React, { useState, createContext, useEffect } from "react";
-import { ClimbingBoxLoader } from "react-spinners";
+import { PacmanLoader } from "react-spinners";
 
 export const DarkModeContext = createContext();
 
@@ -22,7 +22,7 @@ export default function ClientLayout({ children }) {
     <>
       {loading ? (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
-          <ClimbingBoxLoader size={20} color="#000000" />
+          <PacmanLoader  size={20} color="#000000" />
         </div>
       ) : (
         <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
