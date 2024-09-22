@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/footer/footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import React, { useState, createContext, useEffect } from "react";
@@ -33,6 +34,7 @@ export default function ClientLayout({ children }) {
             <div className={`${darkMode ? "" : "text-gray-700"}`}>
               {children}
             </div>
+            <Footer/>
           </div>
         </DarkModeContext.Provider>
       )}
