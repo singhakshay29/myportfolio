@@ -26,8 +26,8 @@ export default function CardOne() {
           : <Image src={me} width={150} height={130} alt="logo" />}
       </div>
       <div className="m-2 pt-6 font-[Ubuntu]">
-        I’m an enthusiastic Laravel developer with experience, keen to leverage
-        my robust knowledge in Laravel and related technologies to significantly
+        I’m an enthusiastic React developer with experience, keen to leverage
+        my robust knowledge in React and related technologies to significantly
         contribute to the company’s success while continuously expanding my
         expertise.I enjoy creating solutions from scratch, exploring how things
         work, and am driven by curiosity to solve complex challenges.
