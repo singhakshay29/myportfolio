@@ -4,7 +4,6 @@ import "./dark.css";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 export default function CardNine({ setDarkMode, darkMode }) {
-  console.log(darkMode);
   // Toggle dark mode state
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);

@@ -85,3 +85,38 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+/* Custom styles in NavBar.css or global.css */
+.custom-navbar {
+  /* height: 300px; */
+  backdrop-filter: blur(10px); /* Apply background blur */
+  background-color: rgba(0, 0, 0, 0.3); /* Transparent dark background */
+}
+
+.custom-navbar-toggle {
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 30px;
+}
+
+.custom-navbar-collapse {
+  position: fixed;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.custom-navbar-link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  height: 80px;
+}
+
+.custom-navbar-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+}
+
