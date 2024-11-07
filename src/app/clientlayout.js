@@ -10,6 +10,7 @@ export const DarkModeContext = createContext();
 export default function ClientLayout({ children }) {
   const [darkMode, setDarkMode] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [screenSize, setScreenSize] = useState(null);
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,6 +20,23 @@ export default function ClientLayout({ children }) {
     return () => clearTimeout(timer);
   }, []);
   
+  useEffect(() => {
+    // Ensure code only runs on client side
+    if (typeof window !== "undefined") {
+      setScreenSize(window.innerWidth);
+      
+      const updateDimension = () => {
+        setScreenSize(window.innerWidth);
+      };
+      
+      window.addEventListener("resize", updateDimension);
+
+      return () => {
+        window.removeEventListener("resize", updateDimension);
+      };
+    }
+  }, []);
+  
   return (
     <>
       {loading ? (
@@ -26,7 +44,7 @@ export default function ClientLayout({ children }) {
           <PacmanLoader  size={20} color="#000000" />
         </div>
       ) : (
-        <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
+        <DarkModeContext.Provider value={{ darkMode, setDarkMode, screenSize }}>
           <div
             className={` ${loading ? 'fade-in' : 'show'} ${darkMode ? "dark" : "light"} bg-background text-foreground min-h-screen`}
           >

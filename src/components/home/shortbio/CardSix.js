@@ -6,7 +6,7 @@ export default function CardSix({ darkMode }) {
     <div
       className={`${darkMode
         ? " bg-white dark:bg-gray-800"
-        : "bg-white "}  rounded-3xl  lg:p-10 min-h-[310px] flex flex-col justify-between hover:shadow-lg bg-cover bg-center bg-[url('../assets/doodle.png')]`}
+        : "bg-white "}  rounded-3xl  p-10 min-h-[310px] flex flex-col justify-between hover:shadow-lg bg-cover bg-center bg-[url('../assets/doodle.png')]`}
     >
       <div className=" pt-8 font-pacifico font-bold text-4xl">
         How it started vs. how it&apos;s going

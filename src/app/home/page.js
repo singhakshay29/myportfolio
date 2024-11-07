@@ -14,50 +14,149 @@ import CardThree from "@/components/home/tools/CardThree";
 import CardOne from "@/components/home/bio/CardOne";
 
 export default function Home() {
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const { screenSize, darkMode, setDarkMode } = useContext(DarkModeContext);
   return (
-    <div className="grid grid-rows-4 grid-cols-4 gap-6 pt-32 p-16 place-content-center">
-      <div
-        className={`${darkMode
-          ? "bg-[#1f2937] "
-          : " bg-[#ffffff] "} col-span-2   rounded-3xl`}
-      >
-        <CardOne />
-      </div>
-      <div className="  rounded-3xl">
-        <CardTwo />
-      </div>
-      <div
-        className={`${darkMode ? "bg-[#1f2937] " : ""} row-span-2  rounded-3xl`}
-      >
-        <CardThree darkMode={darkMode} />
-      </div>
-      <div
-        className={`${darkMode
-          ? "bg-[#1f2937] "
-          : " bg-[#ffffff] "}   rounded-3xl`}
-      >
-        <CardNine darkMode={darkMode} setDarkMode={setDarkMode} />
-      </div>
-      <div className=" rounded-3xl">
-        <CardFive />
-      </div>
-      <div className=" row-span-2  rounded-3xl">
-        <CardFour darkMode={darkMode} />
-      </div>
-      <div className=" col-span-2  rounded-3xl">
-        <CardSix darkMode={darkMode} />
-      </div>
-      <div className="bg-[#1f2937]  rounded-3xl">
-        <CardSeven />
-      </div>
-      <div
-        className={`${darkMode
-          ? "bg-[#1f2937]"
-          : "bg-[#ffffff] ` 1"} col-span-2   rounded-3xl`}
-      >
-        <CardEight />
-      </div>
-    </div>
+    <>
+      {screenSize > 1000 && (
+        <div className="grid grid-rows-4 grid-cols-4 gap-6 pt-32 p-16 place-content-center">
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            } col-span-2   rounded-3xl`}
+          >
+            <CardOne />
+          </div>
+          <div className="relative col-span rounded-3xl">
+            <CardTwo />
+          </div>
+          <div
+            className={`${darkMode ? "bg-[#1f2937] " : ""} row-span-2  rounded-3xl`}
+          >
+            <CardThree darkMode={darkMode} />
+          </div>
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            }   rounded-3xl`}
+          >
+            <CardNine darkMode={darkMode} setDarkMode={setDarkMode} />
+          </div>
+          <div className=" rounded-3xl">
+            <CardFive />
+          </div>
+          <div className=" row-span-2  rounded-3xl">
+            <CardFour darkMode={darkMode} />
+          </div>
+          <div className=" col-span-2  rounded-3xl">
+            <CardSix darkMode={darkMode} />
+          </div>
+          <div className="bg-[#1f2937]  rounded-3xl">
+            <CardSeven />
+          </div>
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937]" : "bg-[#ffffff] ` 1"
+            } col-span-2   rounded-3xl`}
+          >
+            <CardEight />
+          </div>
+        </div>
+      )}
+      {screenSize <= 1000 && screenSize > 600 && (
+        <div className="grid grid-cols-2 gap-6 pt-32 p-16 place-content-center">
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            } col-span-2   rounded-3xl`}
+          >
+            <CardOne />
+          </div>
+          <div className=" rounded-3xl">
+            <CardFive />
+          </div>
+          <div className=" relative rounded-3xl">
+            <CardTwo />
+          </div>
+          <div
+            className={`${darkMode ? "bg-[#1f2937] " : ""} row-span-2  rounded-3xl`}
+          >
+            <CardThree darkMode={darkMode} />
+          </div>
+
+          <div className=" row-span-2  rounded-3xl">
+            <CardFour darkMode={darkMode} />
+          </div>
+
+          <div className="bg-[#1f2937]  rounded-3xl">
+            <CardSeven />
+          </div>
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            }   rounded-3xl`}
+          >
+            <CardNine darkMode={darkMode} setDarkMode={setDarkMode} />
+          </div>
+          <div className=" col-span-2  rounded-3xl">
+            <CardSix darkMode={darkMode} />
+          </div>
+
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937]" : "bg-[#ffffff] ` 1"
+            } col-span-2   rounded-3xl`}
+          >
+            <CardEight />
+          </div>
+        </div>
+      )}
+      {screenSize <= 600 && (
+        <div className="grid grid-cols-2  gap-4 pt-32 p-16 place-content-center">
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            } col-span-2 rounded-3xl`}
+          >
+            <CardOne />
+          </div>
+          <div className="col-span-2  rounded-3xl">
+            <CardFive />
+          </div>
+          <div className=" col-span-2 relative rounded-3xl">
+            <CardTwo />
+          </div>
+          <div className="bg-[#1f2937] col-span-2  rounded-3xl">
+            <CardSeven />
+          </div>
+          <div
+            className={`${darkMode ? "bg-[#1f2937] " : ""} col-span-2  rounded-3xl`}
+          >
+            <CardThree darkMode={darkMode} />
+          </div>
+
+          <div className=" col-span-2  rounded-3xl">
+            <CardFour darkMode={darkMode} />
+          </div>
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937] " : " bg-[#ffffff] "
+            } col-span-2   rounded-3xl`}
+          >
+            <CardNine darkMode={darkMode} setDarkMode={setDarkMode} />
+          </div>
+          <div className=" col-span-2  rounded-3xl">
+            <CardSix darkMode={darkMode} />
+          </div>
+
+          <div
+            className={`${
+              darkMode ? "bg-[#1f2937]" : "bg-[#ffffff] ` 1"
+            } col-span-2  rounded-3xl`}
+          >
+            <CardEight />
+          </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -6,7 +6,7 @@ import { DarkModeContext } from "../../app/clientlayout";
 export default function CardTwo({ img, heading, text, link }) {
   const { darkMode } = useContext(DarkModeContext);
   return (
-    <div className="p-2 h-80">
+    <div className="p-2">
       <div className="p-8 overflow-hidden h-28 ">
         <Image src={img} width={50} height={130} alt="logo" />
       </div>
