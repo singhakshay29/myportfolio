@@ -13,7 +13,8 @@ export default function CardOne({
   toolImgOne,
   toolImgTwo,
   toolImgThree,
-  toolImgFour
+  toolImgFour,
+  toolImgFive
 }) {
   return (
     <div className="flex">
@@ -55,8 +56,9 @@ export default function CardOne({
         <div className="flex justify-between px-4">
           {toolImgOne && <Image src={toolImgOne} width={30} alt="logo" />}
           {toolImgTwo && <Image src={toolImgTwo} width={30} alt="logo" />}
-          {toolImgThree && <Image src={toolImgThree} width={30} alt="logo" />}
+          {toolImgThree && <Image src={toolImgThree}  width={30} alt="logo" />}
           {toolImgFour && <Image src={toolImgFour} width={30} alt="logo" />}
+          {toolImgFive && <Image className="px-2" src={toolImgFive} width={30} alt="logo" />}
         </div>
       </div>
     </div>
