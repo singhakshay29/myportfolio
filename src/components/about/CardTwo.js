@@ -8,7 +8,7 @@ export default function CardTwo() {
       </div>
       <div className="flex justify-between font-[Ubuntu]">
         <div className="text-2xl ">Unipro World</div>
-        <div className="font-[Ubuntu] text-sm pt-2">Jan 2024 - Present </div>
+        {/* <div className="font-[Ubuntu] text-sm pt-2">July 2024 - Present </div> */}
       </div>
       <div className="my-4 font-[Ubuntu]">Frontend Developer</div>
       <div className=" font-[Ubuntu]">Noida UP India</div>
